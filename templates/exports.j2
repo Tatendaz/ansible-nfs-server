@@ -1,0 +1,3 @@
+{% for client in client_ip_list %}
+{{ folder_to_share }} {{client}}(rw,sync,no_subtree_check)
+{% endfor %}

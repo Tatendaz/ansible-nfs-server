@@ -1,0 +1,17 @@
+---
+# tasks file for ansible-nfs-server
+- name: Install nfs server packages
+  import_tasks: install.yml
+  notify: "Restart service"
+
+- name: Create directories for NFS share
+  import_tasks: create.yml
+  notify: "Restart service"
+
+- name: Copy configuration file
+  import_tasks: configuration.yml
+  notify: "Restart service"
+
+# - name: Restart NFS server service    Handler will restart service if any of the tasks create changes
+#   import_tasks: restart.yml
+#   notify: "Restart service"

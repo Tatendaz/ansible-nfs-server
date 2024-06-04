@@ -1,0 +1,6 @@
+---
+# defaults file for ansible-nfs-server
+folder_to_share: "/nfs/example"
+
+client_ip_list:        #clientip lists is a list and here you can add all clients you want the NFS server to server
+  - "10.128.0.31"

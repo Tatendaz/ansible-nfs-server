@@ -1,0 +1,8 @@
+---
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: "{{folder_to_share}}"
+    state: directory
+    mode: 0755
+    owner: nobody
+    group: nogroup

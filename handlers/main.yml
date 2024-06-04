@@ -1,0 +1,8 @@
+---
+# handlers file for ansible-nfs-server
+- name: Restart the NFS server service
+  service:
+    name=nfs-kernel-server
+    state=restarted
+    enabled=yes
+  listen: "Restart service"
